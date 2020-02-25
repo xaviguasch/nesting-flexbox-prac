@@ -36,8 +36,39 @@ a:hover {
   background: rgba(0, 0, 0, 0.4);
 }
 
+/* Flex container */
 .slider-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+}
+
+/* Flex item */
+.slider-nav ul li {
+  flex: 2;
+  text-align: center;
+  display: flex; /* Acts like a flex container itself */
+}
+
+.slider-nav ul li.arrow {
+  flex: 1;
+}
+
+.arrow a {
+  font-size: 30px;
+}
+
+.slider-nav ul li a {
+  flex-basis: 100%;
+  /* We want to stretch as well as center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-nav ul li a span {
+  /* This is the flex item */
+  display: block;
+  width: 100%;
 }
